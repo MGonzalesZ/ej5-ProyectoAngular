@@ -1,0 +1,67 @@
+<section>
+  <form [formGroup]="formNuevoEstudiante" (ngSubmit)="intentarGuardar()">
+    <label>
+      <p>Introduce tu nombre:</p>
+      <input type="text" formControlName="nombre" />
+    </label>
+    <br />
+    <label>
+      <p>Introduce tu apellido:</p>
+      <input type="text" formControlName="apellido" />
+    </label>
+    <br />
+    <label>
+      <p>Introduce tu Edad:</p>
+      <input type="number" formControlName="edad" />
+    </label>
+    <br />
+    <label>
+      <p>Matriculado:</p>
+      <input
+        type="radio"
+        formControlName="matriculado"
+        name="matriculado"
+        value="si"
+      />Matriculado
+      <br />
+      <input
+        type="radio"
+        formControlName="matriculado"
+        name="matriculado"
+        value="no"
+      />No matriculado
+    </label>
+    <br />
+    <label>
+      <p>Estado:</p>
+      <input
+        type="radio"
+        formControlName="activo"
+        name="activo"
+        value="activo"
+      />Activo
+      <br />
+      <input
+        type="radio"
+        formControlName="activo"
+        name="activo"
+        value="pasivo"
+      />Pasivo
+    </label>
+    <br />
+    <br />
+
+    <button type="submit" [disabled]="!formNuevoEstudiante.valid">
+      Guardar
+    </button>
+    @if(!formNuevoEstudiante.valid){
+    <p>Algun campo requerido esta en blanco</p>
+    }
+  </form>
+</section>
+
+<section>
+  <div>
+    <!-- <h4>Vista Previa</h4> -->
+  </div>
+</section>
