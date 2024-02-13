@@ -1,41 +1,71 @@
-<p>
-  <mat-toolbar color="primary">
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with menu icon"
-    >
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>My App</span>
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    class="example-icon"
+    id="IconHambur"
+    aria-label="Example icon-button with menu icon"
+    (click)="barraLateral.toggle()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Sistema de Estudiantes</span>
 
-    <a routerLink="/inicio">Inicio</a>
-    <a routerLink="/nosotros">Nosotros</a>
-    <a routerLink="/noticias">Noticias</a>
+  <a routerLink="/inicio" class="menu-arriba">
+    <mat-icon>home</mat-icon>
+    Inicio</a
+  >
+  <a routerLink="/nosotros" class="menu-arriba">
+    <mat-icon>groups</mat-icon>
+    Nosotros</a
+  >
+  <a routerLink="/noticias" class="menu-arriba">
+    <mat-icon>feed</mat-icon>
+    Noticias</a
+  >
+</mat-toolbar>
 
-    <span class="example-spacer"></span>
-    <button
-      mat-icon-button
-      class="example-icon favorite-icon"
-      aria-label="Example icon-button with heart icon"
-    >
-      <mat-icon>favorite</mat-icon>
-    </button>
-    <button
-      mat-icon-button
-      class="example-icon"
-      aria-label="Example icon-button with share icon"
-    >
-      <mat-icon>share</mat-icon>
-    </button>
-  </mat-toolbar>
-</p>
+<mat-sidenav-container>
+  <mat-sidenav
+    #barraLateral
+    id="barra-lateral"
+    [fixedInViewport]="true"
+    [fixedTopGap]="60"
+    mode="over"
+  >
+    <div class="div-opcion-side">
+      <a routerLink="/inicio" class="menu-side" (click)="barraLateral.toggle()">
+        <mat-icon>home</mat-icon>
+        Inicio</a
+      >
+    </div>
+    <div class="div-opcion-side">
+      <a
+        routerLink="/nosotros"
+        class="menu-side"
+        (click)="barraLateral.toggle()"
+      >
+        <mat-icon>groups</mat-icon>
+        Nosotros</a
+      >
+    </div>
+    <div class="div-opcion-side">
+      <a
+        routerLink="/noticias"
+        class="menu-side"
+        (click)="barraLateral.toggle()"
+      >
+        <mat-icon>feed</mat-icon>
+        Noticias</a
+      >
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <!-- <h1>Bienvenido al Sistema de Estudiantes</h1>
+    <button (click)="guardarDatos()">Crear estudiante Rene</button>
+    <button (click)="cumpleRene()">Cumpleaños de Rene</button>
+    <button (click)="eliminarRene()">Eliminar al estudiante Rene</button> -->
+    <router-outlet></router-outlet>
 
-<h1>Bienvenido al Sistema de Estudiantes</h1>
-<button (click)="guardarDatos()">Crear estudiante Rene</button>
-<button (click)="cumpleRene()">Cumpleaños de Rene</button>
-<button (click)="eliminarRene()">Eliminar al estudiante Rene</button>
-
-<router-outlet></router-outlet>
-
-<footer>Hecho por Mauricio Gonzales - Univalle 2024</footer>
+    <footer>Hecho por Mauricio Gonzales - Univalle 2024</footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

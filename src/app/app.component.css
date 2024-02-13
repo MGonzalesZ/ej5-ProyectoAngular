@@ -1,0 +1,36 @@
+a {
+  margin-left: 2rem;
+  color: azure;
+  text-decoration: none;
+  font-size: 1rem;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 900px) {
+  #IconHambur {
+    display: none;
+  }
+}
+@media (max-width: 900px) {
+  .menu-arriba {
+    display: none;
+  }
+}
+
+#barra-lateral {
+  background-color: #3f51b5;
+}
+.mat-toolbar {
+  height: 60px;
+}
+.div-opcion-side {
+  margin-top: 20px;
+  margin-left: 15px;
+  margin-right: 20px;
+  color: azure;
+}
+/* .menu-side {
+  color: black;
+} */
