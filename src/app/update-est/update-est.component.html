@@ -1,0 +1,27 @@
+<section>
+  <form [formGroup]="formularioEstudiante" (ngSubmit)="procesarGuardado()">
+    <label for="Nombre">
+      Nombre:
+      <input type="text" formControlName="nombre" />
+    </label>
+    <label for="Apellido">
+      Apellido:
+      <input type="text" formControlName="apellido" />
+    </label>
+    <label for="Edad">
+      Edad:
+      <input type="number" formControlName="edad" />
+    </label>
+
+    <button type="submit">Guardar</button>
+  </form>
+
+  <div>
+    @if(validado){
+    <h4>Vista previa</h4>
+    <p>Nombre: {{ formularioEstudiante.value.nombre }}</p>
+    <p>Apellido: {{ formularioEstudiante.value.apellido }}</p>
+    <p>Edad: {{ formularioEstudiante.value.edad }}</p>
+    }
+  </div>
+</section>

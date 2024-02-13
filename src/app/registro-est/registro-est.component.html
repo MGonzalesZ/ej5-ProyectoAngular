@@ -1,0 +1,26 @@
+<section>
+  <label for="nombre_estudiante">
+    Introduce tu nombre:
+    <input id="nombre_estudiante" type="text" [(ngModel)]="nombreEstudiante" />
+  </label>
+  <label for="apellido_estudiante">
+    Introduce tu apellido:
+    <input
+      id="apellido_estudiante"
+      type="text"
+      [(ngModel)]="apellidoEstudiante"
+    />
+  </label>
+  <br />
+  <label for="edad_estudiante">
+    Introduce tu Edad:
+    <input id="edad_estudiante" type="number" [(ngModel)]="edad" />
+  </label>
+
+  <button (click)="VerificarDatos()">Guardar</button>
+
+  <div>
+    <h4>Vista Previa</h4>
+    <p>El nombre del estudiante es: {{ nombreEstudiante }}</p>
+  </div>
+</section>
