@@ -1,4 +1,41 @@
+<p>
+  <mat-toolbar color="primary">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+
+    <a routerLink="/inicio">Inicio</a>
+    <a routerLink="/nosotros">Nosotros</a>
+    <a routerLink="/noticias">Noticias</a>
+
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+
 <h1>Bienvenido al Sistema de Estudiantes</h1>
 <button (click)="guardarDatos()">Crear estudiante Rene</button>
 <button (click)="cumpleRene()">Cumpleaños de Rene</button>
 <button (click)="eliminarRene()">Eliminar al estudiante Rene</button>
+
+<router-outlet></router-outlet>
+
+<footer>Hecho por Mauricio Gonzales - Univalle 2024</footer>
